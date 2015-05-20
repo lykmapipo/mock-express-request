@@ -1,4 +1,4 @@
-# mock-express-request(WIP)
+# mock-express-request
 
 [![Build Status](https://travis-ci.org/lykmapipo/mock-express-request.svg?branch=master)](https://travis-ci.org/lykmapipo/mock-express-request)
 
