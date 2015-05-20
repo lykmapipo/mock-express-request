@@ -4,7 +4,7 @@
 
 Nodejs library to mock [expressjs](https://github.com/strongloop/express/) http request based on [mock-req](https://github.com/diachedelic/mock-req)
 
-*Note: The mocked request instance have the same proterties and methods as an instance of express http request*
+*Note: The mocked request instance have the same properties and methods as an instance of express http request*
 
 ## Installation
 ```sh
