@@ -4,12 +4,18 @@
     "description": "Nodejs library to mock express http request",
     "keywords": [
         "express",
+        "connect",
         "mock",
         "stab",
         "unit",
         "test",
         "spec",
-        "response"
+        "specification",
+        "bdd",
+        "tdd",
+        "request",
+        "http",
+        "htttps"
     ],
     "main": "index.js",
     "scripts": {
