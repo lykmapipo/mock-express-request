@@ -5,13 +5,11 @@ var _ = require('lodash');
 var MockRequest = require('mock-req');
 var util = require('util');
 var accepts = require('accepts');
-var deprecate = require('depd')('mock-express-request');
 var isIP = require('net').isIP;
 var typeis = require('type-is');
 var fresh = require('fresh');
 var parseRange = require('range-parser');
 var parse = require('parseurl');
-// var proxyaddr = require('proxy-addr');
 
 
 /**
@@ -476,9 +474,9 @@ defineGetter(MockExpressRequest.prototype, 'hostname', function hostname() {
 });
 
 // TODO: change req.host to return host in next major
-defineGetter(MockExpressRequest.prototype, 'host', deprecate.function(function host() {
+defineGetter(MockExpressRequest.prototype, 'host', function host() {
     return this.hostname;
-}, 'req.host: Use req.hostname instead'));
+});
 
 
 /**
