@@ -63,6 +63,8 @@ function MockExpressRequest(options) {
 
 
     MockRequest.call(this, options);
+    
+    this.cookies = {};
 }
 util.inherits(MockExpressRequest, MockRequest);
 
