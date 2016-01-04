@@ -61,6 +61,9 @@ function MockExpressRequest(options) {
     //extend res
     options.res = _.merge(res, options.res || {});
 
+    // default query property
+    options.query = options.query || {};
+
 
     MockRequest.call(this, options);
     
