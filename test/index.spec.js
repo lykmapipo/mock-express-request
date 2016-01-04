@@ -102,6 +102,20 @@ describe('MockExpressRequest', function() {
         done();
     });
 
+    it('should have an empty query', function() {
+      var req = new MockExpressRequest();
+      expect(req).to.have.property('query');
+    });
+
+    it('should expose query parameters as properties', function() {
+      var req = new MockExpressRequest({
+        query: {
+          id: 20
+        }
+      });
+
+      expect(req.query).to.have.property('id', 20);
+    });
 
     it('should be able to return the value of param `name` when present or `defaultValue`.', function(done) {
         var request = new MockExpressRequest({
