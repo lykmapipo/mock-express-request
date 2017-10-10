@@ -27,6 +27,16 @@ describe('MockExpressRequest', function() {
         done();
     });
 
+    it('should be able to pass cookies to constructor', function() {
+        var request = new MockExpressRequest({ cookies: { token: 'TOKE' }});
+        expect(request.cookies).to.eql({token:'TOKE'});
+    });
+
+    it('should create cookies stub by default', function() {
+        var request = new MockExpressRequest();
+        expect(request).to.have.property('cookies');
+    });
+
 
     it('should be able to `get` request header', function(done) {
         var request = new MockExpressRequest({

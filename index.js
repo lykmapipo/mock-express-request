@@ -66,8 +66,12 @@ function MockExpressRequest(options) {
 
 
     MockRequest.call(this, options);
-    
-    this.cookies = {};
+
+    // Cookies may be passed in directly.
+    // If not, we provide an empty stub.
+    if (!this.cookies) {
+      this.cookies = {};
+    }
 }
 util.inherits(MockExpressRequest, MockRequest);
 
