@@ -24,6 +24,7 @@ var request = new MockExpressRequest();
 var request = new MockExpressRequest({
     method: 'PUT',
     url: '/stuff?q=thing',
+    cookies: { token: "MYTOKEN" },
     headers: {
         'Accept': 'text/plain'
     }
